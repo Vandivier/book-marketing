@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate --config=./prisma.config.ts && next build",
+    "postinstall": "prisma generate --config=./prisma.config.ts",
     "start": "next start",
     "lint": "eslint",
     "wipe:test-data": "node --experimental-strip-types scripts/wipe-test-data.ts"
