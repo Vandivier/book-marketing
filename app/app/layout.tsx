@@ -15,9 +15,9 @@ const bodyFont = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "The Evergreen Chronicles",
+  title: "The Evergreen Series",
   description:
-    "Join the waitlist for The Evergreen Chronicles, an epic fantasy book series.",
+    "Join the waitlist for The Evergreen Series, an epic fantasy book series.",
 };
 
 export default function RootLayout({

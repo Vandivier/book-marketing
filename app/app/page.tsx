@@ -9,11 +9,11 @@ export default function Home() {
         <header className="flex flex-wrap items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <div className="flex h-11 w-11 items-center justify-center rounded-full border border-emerald-800/30 bg-emerald-900/10 text-sm font-semibold uppercase tracking-[0.35em] text-emerald-900">
-              EC
+              ES
             </div>
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-emerald-800">
-                The Evergreen Chronicles
+                The Evergreen Series
               </p>
               <p className="text-sm text-emerald-900/70">
                 Book release waitlist
@@ -38,10 +38,10 @@ export default function Home() {
               cost.
             </h1>
             <p className="max-w-xl text-base leading-7 text-emerald-900/80 sm:text-lg">
-              The Evergreen Chronicles follows a wandering archivist and a
-              hidden heir as they cross a sentient wilderness to restore a
-              fractured kingdom. Join the waitlist to be first in line for cover
-              reveals, preorder news, and exclusive launch stories.
+              The Evergreen Series follows a wandering archivist and a hidden
+              heir as they cross a sentient wilderness to restore a fractured
+              kingdom. Join the waitlist to be first in line for cover reveals,
+              preorder news, and exclusive launch stories.
             </p>
 
             <WaitlistForm />
@@ -98,7 +98,7 @@ export default function Home() {
               key={item.title}
               className="rounded-3xl border border-emerald-900/10 bg-white/60 p-6 shadow-sm"
             >
-              <h3 className="font-[var(--font-heading)] text-2xl text-emerald-950">
+              <h3 className="font-(--font-heading) text-2xl text-emerald-950">
                 {item.title}
               </h3>
               <p className="mt-3 text-sm leading-6 text-emerald-900/75">
@@ -114,51 +114,42 @@ export default function Home() {
               The series arc
             </p>
             <h2 className="mt-4 font-[var(--font-heading)] text-3xl text-emerald-950">
-              The Evergreen Chronicles
+              The Evergreen Series
             </h2>
             <p className="mt-4 text-sm leading-6 text-emerald-900/75">
               Each book follows a different guide through the forest, revealing
               a hidden layer of its memory. Expect lyrical prose, high-stakes
-              alliances, and a slow-burn mystery across the trilogy.
+              alliances, and a slow-burn mystery across the saga.
             </p>
           </div>
           <div className="grid gap-4">
-            {[
-              {
-                title: "Book I: The Verdant Oath",
-                text: "A wandering archivist uncovers a pact that could awaken the forest.",
-              },
-              {
-                title: "Book II: The Hollow Crown",
-                text: "Rebels rally around a forgotten heir as the forest shifts its borders.",
-              },
-              {
-                title: "Book III: The Eternal Canopy",
-                text: "The final pilgrimage to the heartwood determines who may rule.",
-              },
-            ].map((book) => (
-              <div
-                key={book.title}
-                className="rounded-2xl border border-emerald-900/10 bg-white/70 p-5"
-              >
-                <p className="text-xs uppercase tracking-[0.3em] text-emerald-800">
-                  {book.title}
-                </p>
-                <p className="mt-2 text-sm text-emerald-900/70">
-                  {book.text}
-                </p>
-              </div>
-            ))}
+            <div className="rounded-2xl border border-emerald-900/10 bg-white/70 p-5">
+              <p className="text-xs uppercase tracking-[0.3em] text-emerald-800">
+                Book I (working title): Image of the Beast
+              </p>
+              <p className="mt-2 text-sm text-emerald-900/70">
+                Tentative title. Follow the waitlist updates for future book
+                names and release news.
+              </p>
+            </div>
           </div>
         </section>
 
         <footer className="flex flex-col items-start gap-4 border-t border-emerald-900/10 pt-8 text-sm text-emerald-900/70 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            The Evergreen Chronicles is an upcoming fantasy series. Join the
-            waitlist to stay close to the release.
+            The Evergreen Series is an upcoming fantasy saga. Join the waitlist
+            to stay close to the release.
           </p>
           <p className="text-xs uppercase tracking-[0.3em] text-emerald-800">
-            Powered by story
+            Powered by{" "}
+            <a
+              href="https://ladderly.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ladderly.io
+            </a>{" "}
+            ❤️ 🔥 ☕
           </p>
         </footer>
       </main>

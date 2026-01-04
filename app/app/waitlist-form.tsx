@@ -9,7 +9,7 @@ type WaitlistResponse = {
 };
 
 const CONFIRM_MESSAGES: Record<string, string> = {
-  "1": "Your email is confirmed. Welcome to the Evergreen Chronicle waitlist.",
+  "1": "Your email is confirmed. Welcome to the Evergreen Series waitlist.",
   invalid: "That confirmation link is invalid. Please sign up again.",
   expired: "That confirmation link expired. Please sign up again.",
 };
@@ -86,7 +86,7 @@ export default function WaitlistForm() {
           disabled={status === "loading"}
         />
         <button
-          className="h-12 rounded-full bg-emerald-900 px-6 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-50 transition hover:bg-emerald-800 disabled:cursor-not-allowed disabled:bg-emerald-900/70"
+          className="h-12 cursor-pointer rounded-full bg-emerald-900 px-6 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-50 transition hover:bg-emerald-800 disabled:cursor-not-allowed disabled:bg-emerald-900/70"
           type="submit"
           disabled={status === "loading"}
         >

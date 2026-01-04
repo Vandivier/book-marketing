@@ -90,9 +90,9 @@ export async function POST(request: Request) {
   await postmark.sendEmail({
     From: fromEmail,
     To: email,
-    Subject: "Confirm your email for The Evergreen Chronicles",
-    TextBody: `Welcome to The Evergreen Chronicles waitlist!\n\nPlease confirm your email to secure your spot:\n${confirmUrl}\n\nIf you did not request this, you can ignore this email.`,
-    HtmlBody: `<p>Welcome to <strong>The Evergreen Chronicles</strong> waitlist!</p><p>Please confirm your email to secure your spot:</p><p><a href="${confirmUrl}">Confirm your email</a></p><p>If you did not request this, you can ignore this email.</p>`,
+    Subject: "Confirm your email for The Evergreen Series",
+    TextBody: `Welcome to The Evergreen Series waitlist!\n\nPlease confirm your email to secure your spot:\n${confirmUrl}\n\nIf you did not request this, you can ignore this email.`,
+    HtmlBody: `<p>Welcome to <strong>The Evergreen Series</strong> waitlist!</p><p>Please confirm your email to secure your spot:</p><p><a href="${confirmUrl}">Confirm your email</a></p><p>If you did not request this, you can ignore this email.</p>`,
     MessageStream: process.env.POSTMARK_MESSAGE_STREAM,
   });
 
