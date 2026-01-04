@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Top-level folders
+
+- `app/`: Next.js App Router source for routes, layouts, and global styles.
+- `supabase/`: Optional Supabase local dev config, migrations, and edge functions (if added).
+
 ## Getting Started
 
 First, run the development server:
