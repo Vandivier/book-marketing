@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "wipe:test-data": "node --experimental-strip-types scripts/wipe-test-data.ts"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.2.0",
@@ -28,6 +29,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
     "tailwindcss": "^4",
+    "tsx": "^4.7.1",
     "typescript": "^5"
   }
 }

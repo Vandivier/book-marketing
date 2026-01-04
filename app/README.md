@@ -32,6 +32,11 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 - Optionally set `POSTMARK_MESSAGE_STREAM` if your transactional stream name differs from the default.
 - Set `APP_URL` so confirmation links point to your deployed domain.
 
+## Test data cleanup
+
+- Waitlist signups from `localhost` are flagged as test data.
+- To remove test records, run `npm run wipe:test-data`.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

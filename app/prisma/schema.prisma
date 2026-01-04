@@ -12,6 +12,7 @@ model WaitlistEmail {
   verifyToken          String?  @unique
   verifyTokenExpiresAt DateTime?
   verifiedAt           DateTime?
+  isTestData           Boolean  @default(false) @map("is_test_data")
   createdAt            DateTime @default(now())
   updatedAt            DateTime @updatedAt
 }

@@ -24,6 +24,15 @@ function getPostmarkClient() {
   return new ServerClient(apiKey);
 }
 
+function isLocalRequest(request: Request) {
+  try {
+    const url = new URL(request.url);
+    return url.hostname === "localhost" || url.hostname === "127.0.0.1";
+  } catch {
+    return false;
+  }
+}
+
 export async function POST(request: Request) {
   let payload: { email?: string } = {};
 
@@ -58,17 +67,20 @@ export async function POST(request: Request) {
 
   const verifyToken = crypto.randomBytes(24).toString("hex");
   const verifyTokenExpiresAt = new Date(Date.now() + TOKEN_TTL_MS);
+  const isTestData = existing?.isTestData ?? isLocalRequest(request);
 
   await prisma.waitlistEmail.upsert({
     where: { email },
     update: {
       verifyToken,
       verifyTokenExpiresAt,
+      isTestData,
     },
     create: {
       email,
       verifyToken,
       verifyTokenExpiresAt,
+      isTestData,
     },
   });
 
