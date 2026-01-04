@@ -1,3 +1,5 @@
+import WaitlistForm from "./waitlist-form";
+
 export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top,#fefcf7_0%,#f3efe6_40%,#e4efe7_100%)] text-foreground">
@@ -42,28 +44,7 @@ export default function Home() {
               reveals, preorder news, and exclusive launch stories.
             </p>
 
-            <form
-              id="waitlist"
-              className="flex w-full max-w-md flex-col gap-3 sm:flex-row"
-            >
-              <input
-                className="h-12 flex-1 rounded-full border border-emerald-900/20 bg-white/80 px-5 text-sm text-emerald-950 placeholder:text-emerald-900/50 shadow-sm focus:border-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-700/30"
-                type="email"
-                name="email"
-                placeholder="you@evergreenmail.com"
-                autoComplete="email"
-                required
-              />
-              <button
-                className="h-12 rounded-full bg-emerald-900 px-6 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-50 transition hover:bg-emerald-800"
-                type="submit"
-              >
-                Join the waitlist
-              </button>
-            </form>
-            <p className="text-xs uppercase tracking-[0.25em] text-emerald-900/60">
-              No spam. Only story drops and release updates.
-            </p>
+            <WaitlistForm />
           </div>
 
           <div className="rounded-3xl border border-emerald-900/10 bg-white/70 p-8 shadow-[0_20px_60px_-45px_rgba(16,52,42,0.6)] backdrop-blur">

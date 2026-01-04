@@ -9,7 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@prisma/client": "^7.2.0",
     "next": "16.1.1",
+    "postmark": "^4.0.3",
     "prettier": "^3.7.4",
     "prisma": "^7.2.0",
     "react": "19.2.3",

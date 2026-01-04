@@ -25,6 +25,13 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Email confirmation setup
+
+- Create a Postmark server key using a transactional stream (recommended for confirmation emails).
+- Set `POSTMARK_API_KEY` (also called `X-Postmark-Server-Token` in Postmark docs) and `POSTMARK_FROM_EMAIL` in `.env`.
+- Optionally set `POSTMARK_MESSAGE_STREAM` if your transactional stream name differs from the default.
+- Set `APP_URL` so confirmation links point to your deployed domain.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
