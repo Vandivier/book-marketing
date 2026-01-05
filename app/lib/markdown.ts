@@ -191,6 +191,7 @@ const isSafeSegment = (segment: string) =>
 const normalizeSlug = (slug?: string[]) =>
   Array.isArray(slug)
     ? slug
+        .filter((segment): segment is string => typeof segment === "string")
         .map((segment) => segment.replace(/\.md$/i, ""))
         .filter((segment) => segment.length > 0)
     : [];
