@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate --config=./prisma.config.ts && next build",
+    "build": "prisma generate --config=./prisma.config.ts && next build && npm run build-sitemap",
+    "build-sitemap": "node --experimental-strip-types scripts/generate-sitemap.ts",
     "start": "next start",
     "lint": "eslint",
     "wipe:test-data": "node --experimental-strip-types scripts/wipe-test-data.ts"
