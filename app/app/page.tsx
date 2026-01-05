@@ -20,6 +20,14 @@ export default function Home() {
               </p>
             </div>
           </div>
+          <nav className="flex flex-wrap items-center gap-4 text-xs font-semibold uppercase tracking-[0.25em] text-emerald-800">
+            <a href="/about" className="transition hover:text-emerald-950">
+              About
+            </a>
+            <a href="/updates" className="transition hover:text-emerald-950">
+              Updates
+            </a>
+          </nav>
           <a
             href="#waitlist"
             className="rounded-full border border-emerald-800/40 bg-emerald-900/10 px-5 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-900 transition hover:bg-emerald-900/20"
