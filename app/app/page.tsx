@@ -1,3 +1,4 @@
+import Link from "next/link";
 import WaitlistForm from "./waitlist-form";
 
 export default function Home() {
@@ -8,9 +9,6 @@ export default function Home() {
       <main className="relative mx-auto flex w-full max-w-6xl flex-col gap-20 px-6 py-14 sm:px-10 lg:px-16">
         <header className="flex flex-wrap items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full border border-emerald-800/30 bg-emerald-900/10 text-sm font-semibold uppercase tracking-[0.35em] text-emerald-900">
-              ES
-            </div>
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-emerald-800">
                 The Evergreen Series
@@ -21,19 +19,19 @@ export default function Home() {
             </div>
           </div>
           <nav className="flex flex-wrap items-center gap-4 text-xs font-semibold uppercase tracking-[0.25em] text-emerald-800">
-            <a href="/about" className="transition hover:text-emerald-950">
+            <Link href="/about" className="transition hover:text-emerald-950">
               About
-            </a>
-            <a href="/updates" className="transition hover:text-emerald-950">
+            </Link>
+            <Link href="/updates" className="transition hover:text-emerald-950">
               Updates
-            </a>
+            </Link>
           </nav>
-          <a
-            href="#waitlist"
+          <Link
+            href="/#waitlist"
             className="rounded-full border border-emerald-800/40 bg-emerald-900/10 px-5 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-900 transition hover:bg-emerald-900/20"
           >
             Notify me
-          </a>
+          </Link>
         </header>
 
         <section className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
@@ -121,7 +119,7 @@ export default function Home() {
             <p className="text-xs uppercase tracking-[0.4em] text-emerald-800">
               The series arc
             </p>
-            <h2 className="mt-4 font-[var(--font-heading)] text-3xl text-emerald-950">
+            <h2 className="mt-4 font-(--font-heading) text-3xl text-emerald-950">
               The Evergreen Series
             </h2>
             <p className="mt-4 text-sm leading-6 text-emerald-900/75">
