@@ -25,7 +25,7 @@ export default function MarkdownPageLayout({
           >
             {backLabel}
           </Link>
-          <h1 className="font-[var(--font-heading)] text-4xl text-emerald-950 sm:text-5xl">
+          <h1 className="font-(--font-heading) text-4xl text-emerald-950 sm:text-5xl">
             {title}
           </h1>
         </header>

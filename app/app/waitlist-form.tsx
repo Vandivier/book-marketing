@@ -20,11 +20,11 @@ export default function WaitlistForm() {
   const [message, setMessage] = useState<string>("");
 
   const urlParams = new URLSearchParams(
-    typeof window !== "undefined" ? window.location.search : "",
+    typeof window !== "undefined" ? window.location.search : ""
   );
   const confirmed = urlParams.get("confirmed");
   const reason = urlParams.get("reason");
-  const confirmKey = confirmed === "1" ? "1" : reason ?? "";
+  const confirmKey = confirmed === "1" ? "1" : (reason ?? "");
   const confirmMessage = confirmKey ? CONFIRM_MESSAGES[confirmKey] : "";
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -62,7 +62,7 @@ export default function WaitlistForm() {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 my-2">
       {confirmMessage ? (
         <div className="rounded-2xl border border-emerald-900/20 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">
           {confirmMessage}
@@ -75,10 +75,10 @@ export default function WaitlistForm() {
         onSubmit={handleSubmit}
       >
         <input
-          className="h-12 flex-1 rounded-full border border-emerald-900/20 bg-white/80 px-5 text-sm text-emerald-950 placeholder:text-emerald-900/50 shadow-sm focus:border-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-700/30"
+          className="p-4 h-12 flex-1 rounded-full border border-emerald-900/20 bg-white/80 px-5 text-sm text-emerald-950 placeholder:text-emerald-900/50 shadow-sm focus:border-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-700/30"
           type="email"
           name="email"
-          placeholder="you@evergreenmail.com"
+          placeholder="you@email.com"
           autoComplete="email"
           required
           value={email}
@@ -97,9 +97,7 @@ export default function WaitlistForm() {
       {message ? (
         <p
           className={`text-xs uppercase tracking-[0.25em] ${
-            status === "error"
-              ? "text-rose-700"
-              : "text-emerald-900/70"
+            status === "error" ? "text-rose-700" : "text-emerald-900/70"
           }`}
         >
           {message}
