@@ -1,0 +1,19 @@
+{
+  "name": "The Evergreen Series",
+  "short_name": "Evergreen",
+  "icons": [
+    {
+      "src": "/favicon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#f6f2ea",
+  "background_color": "#f6f2ea",
+  "display": "standalone"
+}

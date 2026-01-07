@@ -26,6 +26,7 @@ export const metadata: Metadata = {
       { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
     ],
   },
+  manifest: "/site.webmanifest",
 };
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
@@ -38,12 +39,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <body className={`${headingFont.variable} ${bodyFont.variable} antialiased`}>
         {gaId ? (
           <>
             <Script
               async
               src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
             />
             <Script id="ga4-init" strategy="afterInteractive">
               {`window.dataLayer = window.dataLayer || [];
@@ -62,8 +64,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','${gtmId}');`}
           </Script>
         ) : null}
-      </head>
-      <body className={`${headingFont.variable} ${bodyFont.variable} antialiased`}>
         {gtmId ? (
           <noscript>
             <iframe
